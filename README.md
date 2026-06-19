@@ -1,20 +1,20 @@
-# Velonetics-gelf
+# Pucora-gelf
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/velonetics/velonetics-gelf)](https://goreportcard.com/report/github.com/velonetics/velonetics-gelf)
+[![Go Report Card](https://goreportcard.com/badge/github.com/pucora/velonetics-gelf)](https://goreportcard.com/report/github.com/pucora/velonetics-gelf)
 
-A gelf (Graylog Extended Log Format) Writer for [Velonetics](https://velonetics.io) loggers.
+A gelf (Graylog Extended Log Format) Writer for [Pucora](https://pucora.io) loggers.
 
 ## How to use it
 
-This package just return a gelf writer with the configuration provided via Velonetics ExtraConfig.
+This package just return a gelf writer with the configuration provided via Pucora ExtraConfig.
 
 You need to add the Writer to the logger writers.
-This example uses [Velonetics-gologging](https://github.com/velonetics/velonetics-gologging).
+This example uses [Pucora-gologging](https://github.com/pucora/velonetics-gologging).
 
 Import the package
 
 ```
-import "github.com/velonetics/velonetics-gelf"
+import "github.com/pucora/velonetics-gelf"
 ```
 
 Create a new Writer:
@@ -31,7 +31,7 @@ gologging.NewLogger(cfg.ExtraConfig, gelfWriter...)
 
 ## Configuration
 
-Add the `github_com/velonetics/velonetics-gelf` section to the service extra config.
+Add the `github_com/pucora/velonetics-gelf` section to the service extra config.
 
 There's 2 parameters:
 
@@ -47,7 +47,7 @@ Example:
 
 ```
 "extra_config": {
-  "github_com/velonetics/velonetics-gelf": {
+  "github_com/pucora/velonetics-gelf": {
     "address": "myGraylogInstance:12201",
     "enable_tcp": false
   }
